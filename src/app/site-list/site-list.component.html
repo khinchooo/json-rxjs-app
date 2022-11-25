@@ -1,9 +1,9 @@
-<button (click)="addSite()">ADD</button>
-<h5>Site List</h5>
-<ul>
-  <li *ngFor="let site of sites">
+<button (click)="addSite()" class="btn btn-primary add">ADD</button>
+<h5 class="text-center">Site List</h5>
+<ul class="list-group">
+  <li *ngFor="let site of sites" class="list-group-item">
     <a [href]="site.url" target="_blank">{{site.name}}</a>
-    <button (click)="editSite(site.id!)">EDIT</button>
-    <button (click)="deleteSite(site.id!)">DEL</button>
+    <button (click)="deleteSite(site.id!)"class="float-end btn btn-danger">DEL</button>
+    <button (click)="editSite(site.id!)" class="float-end btn btn-secondary me-2">EDIT</button>
   </li>
 </ul>
