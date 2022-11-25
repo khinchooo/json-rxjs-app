@@ -1,22 +1,2 @@
-<h3>Create data</h3>
-  <div><input type="text" [(ngModel)]="siteName" placeholder="Site Name"></div>
-  <div><input type="text" [(ngModel)]="siteURL" placeholder="Site URL"></div>
-  <button (click)="createData()">Create</button>
-  <hr>
-  <h3>Read data</h3>
-  <ul>
-    <li *ngFor="let site of sites; let i = index">
-      {{i+1}} {{site.name}} {{site.url}}
-    </li>
-  </ul>
-  <hr>
-  <h3>Update data</h3>
-  <div><input type="text" [(ngModel)]="updateId" placeholder="ID"></div>
-  <div><input type="text" [(ngModel)]="updateName" placeholder="Site Name"></div>
-  <div><input type="text" [(ngModel)]="updateURL" placeholder="Site URL"></div>
-  <button (click)="updateData()">Update</button>
-  <hr>
-  <h3>Delete data</h3>
-  <div><input type="text" [(ngModel)]="deleteId" placeholder="ID"></div>
-  <button (click)="deleteData()">Delete</button>
-
+<h3>My Favorite</h3>
+<router-outlet></router-outlet>

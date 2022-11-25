@@ -1,0 +1,9 @@
+<button (click)="addSite()">ADD</button>
+<h5>Site List</h5>
+<ul>
+  <li *ngFor="let site of sites">
+    <a [href]="site.url" target="_blank">{{site.name}}</a>
+    <button (click)="editSite(site.id!)">EDIT</button>
+    <button (click)="deleteSite(site.id!)">DEL</button>
+  </li>
+</ul>
